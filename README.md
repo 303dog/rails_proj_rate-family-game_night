@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rate which family games are fun for you and your family!  This app lets you create a user account and rate which games you and your family have fun playing together. 
 
-Things you may want to cover:
+You can search games and read other user's reviews of games before you download them and you can leave your own review on games you have played with your family to help the community when deciding what to play next.
 
-* Ruby version
+This application was created because I have always enjoyed the traditional family game night but in these modern days with the kids getting older and friends and family moving further and further away, it gets harder and harder to organize and schedule them.
 
-* System dependencies
+The hope is that with help, we can build a growing list with reliable reviews of games and apps that are available across different platforms where game play is fun, challenging and interactive with one or two players or even multiple players of three plus or more!  I believe there are games of every genre and skill level out there just waiting to be discovered and shared and hopefully this is the place for that to happen!
 
-* Configuration
+Please log in and share the games you and your family and friends are currently enjoying and why.  Discover new games other users have submitted and share you thoughts on those as well!
 
-* Database creation
+I wish you the best and thanks for your support!
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
