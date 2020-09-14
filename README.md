@@ -40,11 +40,10 @@
 #                     -belongs_to :user
 #       
 #     *Views:
-#             User-
-#                 -index.html.erb
+#             User-  
 #                 -new.html.erb
-#                 -edit.html.erb
-#                 -show.html.erb
+#             ?   -edit.html.erb
+#             ?   -show.html.erb
 #             Review-
 #                 -index.html.erb
 #                 -new.html.erb
@@ -66,7 +65,7 @@
 #   end
 # 
 #   create_table "reviews" do |t|
-#     t.string   "review"
+#     t.string   "share"
 #     t.integer  "rating" 
 #     t.integer  "user_id"
 #     t.integer  "game_id"
