@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="hero">
+<h2>User submitted reviews</h2>
+
+
+<div id="rvDIV">
+<b>
+<%@reviews.each do |rev|%>
+   <p><%=rev.game.title%></p>
+   <p> <%=link_to rev.label, review_path(rev)%></p>
+  <p> by: <%=rev.user.username%></p>
+    <%end%><br>
+
+</div>
+
+<footer>
+<b>
+<%=link_to "Browse Games", games_path%><br>
+<br>
+<%=link_to "Give A Review", new_review_path%><br>
+<br>
+</b>
+
+</footer>
+</div>
+</body>
+</html>

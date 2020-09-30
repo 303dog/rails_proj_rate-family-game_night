@@ -13,3 +13,62 @@
  *= require_tree .
  *= require_self
  */
+
+
+#lDIV {
+    width: 65%;
+    height: 85px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background: white;
+  }
+
+ html {
+     background-image: url("backgrblu.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+
+ header {
+    background-image: url('apps_pic.jpg');
+    background-blend-mode:normal;
+    background-color: rgb(250, 244, 244);
+    padding: 80px;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(5, 0, 0);
+  } 
+ 
+body {
+    font-family: serif;
+  }
+
+
+ footer {
+    background-color: rgb(135, 221, 224);
+    padding: 5px;
+    text-align: center;
+    color: rgb(10, 0, 0);
+  }
+
+  section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+ section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }

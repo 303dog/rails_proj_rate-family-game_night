@@ -1,0 +1,18 @@
+<h2>Log In</h2>
+
+<%if @error%>
+<p><%=@error%></p>
+<%end%>
+<b>
+<%=form_for :user do |f|%>
+<fieldset>
+    <%=f.label :username%>
+    <%=f.text_field :username%>
+    <%=f.label :password%>
+    <%=f.password_field :password%>
+    <%=f.submit "Log in"%>
+</fieldset>
+  </b>
+    <%end%>
+
+    <%=button_to "Use Google to log in", '/auth/google_oauth2'%>

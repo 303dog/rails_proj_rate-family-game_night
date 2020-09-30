@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<span class="line">
+<h2>Reviews</h2>
+</span>
+<p><u><%=@review.label%></u></p>
+<p><%=@review.game.title%></p>
+<p><em><%=@review.summary%></em></p>
+<p><b>REVIEW BY: <%=@review.user.username%> on <%=@review.game.created_at.strftime("%m-%d-%y")%>
+<div id="dDIV">
+
+</div>
+
+<footer>
+<%=link_to "Edit this Review", edit_review_path%><br>
+<br>
+<%=link_to "Review a different game", new_review_path%><br>
+<br>
+<%=link_to "Back to the Games", games_path%>
+</footer>
+</html>

@@ -30,6 +30,7 @@
 #                          
 #     *Models:
 #             User.rb
+#                     _has_secure_password
 #                     -has_many :reviews
 #                     -has_many :games
 #             Review.rb
@@ -59,23 +60,23 @@
 # SCHEMA*************
 # 
 #   create_table "users" do |t|
-#     t.string   "user_name"
-#     t.string   "email"
+#     t.string   "username"
 #     t.text     "password_digest
 #   end
 # 
 #   create_table "reviews" do |t|
-#     t.string   "share"
+#     t.string   "summary"
 #     t.integer  "rating" 
 #     t.integer  "user_id"
 #     t.integer  "game_id"
 #   end
 # 
 #   create_table "games" do |t|
-#     t.string   "genre"
-#     t.string   "game_theme" 
+#     t.string   "label"
+#     t.string   "genre"                                Need to add a "game summary" or "description"
+#     t.string   "theme" 
 #     t.integer  "number_of_players"
-#     t.integer  "user_id"
+#     t.text     "title"   
 #   end
 # 
 

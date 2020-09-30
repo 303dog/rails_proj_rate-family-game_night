@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'users#index'
+
   get '/signup', to: 'users#new'
   get '/signup', to: 'users#create'
 
@@ -9,16 +11,19 @@ Rails.application.routes.draw do
   #resources :reviews
   
   resources :users 
-  resources :reveiws, only: [:index]
+  resources :reviews
+
+  resources :users do 
+    resources :reviews
+  end
 
   get '/auth/:provider/callback', to: 'sessions#omniauth'
   
   resources :games do
     resources :reviews
   end
-  resources :reviews do 
-    resources :users
-  end
+
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 

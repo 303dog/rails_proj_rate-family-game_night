@@ -1,0 +1,19 @@
+<h1>Users Show</h1>>
+
+<h2>You are currently logged in as<%=current_user.username%></h2>
+
+
+<body>
+<%current_user.reviews.each do |rev|%>
+   <p> <%=link_to rev.label, review_path(rev)%></p>
+    <%end%><br>
+
+</body>
+
+
+<b>
+<%=link_to "Browse Games", games_path%><br>
+<br>
+<%=link_to "Give A Review", new_review_path%><br>
+<br>
+</b>
