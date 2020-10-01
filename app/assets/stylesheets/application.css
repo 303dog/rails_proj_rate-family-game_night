@@ -19,9 +19,9 @@
     width: 65%;
     height: 85px;
     display: block;
-    justify-content: center;
     align-items: center;
-    background: white;
+    background: rgb(245, 248, 212);
+    text-shadow: 2px 2px #20f30d;
   }
 
  html {

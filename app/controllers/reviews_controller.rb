@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
+    before_action :redirect_if_not_logged_in
 
     def new
-        redirect_if_not_logged_in
         @game = Game.find_by_id(params[:game_id]) if params[:game_id]
         @review = Review.new
     end
@@ -30,8 +30,9 @@ class ReviewsController < ApplicationController
 
     def edit
         @review = Review.find_by_id(params[:id])
-        # if @review.user == current_user
+        if @review.user == current_user
         @game = @review.game
+        end
     end
 
     def update 
@@ -50,6 +51,8 @@ class ReviewsController < ApplicationController
     def review_params
         params.require(:review).permit(:label, :summary, :rating, :game_id)
     end
+
+    
 
 
 end

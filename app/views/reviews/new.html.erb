@@ -4,7 +4,7 @@
 <%=link_to "/  Back", games_path(@games)%>
   <span class="line">
 <%if @game%>
-    <h2>Add Your Review for <%=@game.title%></h2>
+    <h2>Add Your Review for <u><%=@game.title%></u></h2>
 <%else%>
     <h2>Add Your Review</h2>
 <%end%>

@@ -14,7 +14,7 @@
 <p><b>Allowed Players:</b> <em><%= @game.num_of_players %></em></p>
 <p><b>Game Description:</b> <em><%= @game.description %></em></p>
 </div>
-<br>
+
 <footer>
 <p><b><%=link_to "Edit This Game", edit_game_path(@game)%></p>
 <p><%=link_to "Review this game", new_game_review_path(@game)%></p>

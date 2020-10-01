@@ -1,18 +1,30 @@
-<h2>Log In</h2>
+<!DOCTYPE html>
+<html>
+<span class="line"><p>
+<h2>Log In</h2></p>
+
 
 <%if @error%>
 <p><%=@error%></p>
 <%end%>
+</span><br>
 <b>
-<%=form_for :user do |f|%>
 <fieldset>
+<div id="pDIV">
+<%=form_for :user do |f|%>
     <%=f.label :username%>
-    <%=f.text_field :username%>
+    <%=f.text_field :username%><br>
     <%=f.label :password%>
     <%=f.password_field :password%>
     <%=f.submit "Log in"%>
+</div>
 </fieldset>
   </b>
     <%end%>
+    <span class="line"></span>
+    
+    <footer>
 
     <%=button_to "Use Google to log in", '/auth/google_oauth2'%>
+</footer>
+    </html>
