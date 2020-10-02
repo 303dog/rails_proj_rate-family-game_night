@@ -1,7 +1,7 @@
-<h2>Edit your review <%=@review.game.title%></h2>
+<h2>Edit this review of <u><%=@review.game.title%></u></h2>
 
 <p><%=form_for (@review) do |f|%>
-
+<fieldset>
     <%= f.label :rating, "Rate the game 1-5"%><br>
     <%= f.number_field :rating%><br>
     <%= f.label :label, "Title" %><br>
@@ -12,6 +12,8 @@
     <%= f.submit %>
 
 <%end%>
-
-<%=link_to "Delete Review", edit_review_path%>
-
+</fieldset>
+<span class="line"></span>
+<footer>
+<%=link_to "Delete Review", review_path(:review)%>
+</footer>

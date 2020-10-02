@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <b>
+  <br>
+  <%=link_to "Browse Games", games_path%><br>
+  <br>
+  <%=link_to "Give A Review", new_review_path%><br>
+  <br>
+  </b>
+</head>
+
 <body>
-<div class="hero">
-<h2>User submitted reviews</h2>
+  <h2><u>Library of Games</u></h2>
 
+ 
+    <div class="row"><%@reviews.each do |rev|%></div>
 
-<div id="rvDIV">
-<b>
-<%@reviews.each do |rev|%>
-   <p><%=rev.game.title%></p>
-   <p> <%=link_to rev.label, review_path(rev)%></p>
-  <p> by: <%=rev.user.username%></p>
-    <%end%><br>
+      <div class="column"><b><h3><%=rev.game.title%></h3></p></b>
 
-</div>
+        <div class="card"><p><%=link_to rev.label, review_path(rev)%></p> by:<%=rev.user.username%></div></div>
+    <%end%>
+</body>
 
 <footer>
-<b>
-<%=link_to "Browse Games", games_path%><br>
-<br>
-<%=link_to "Give A Review", new_review_path%><br>
-<br>
-</b>
 
 </footer>
-</div>
-</body>
+
+
 </html>

@@ -1,6 +1,10 @@
-<h1>Create a new account: "Users.new"</h1>
+<!DOCTYPE html>
+<html>
+<span class="line">
+<h1>Create A New Account</h1>
+</span>
+<br>
 <body>
-
 <%=form_for @user do |f|%>
 <fieldset>
     <%=f.label :username %>
@@ -8,15 +12,14 @@
     <%=f.label :password %>
     <%=f.password_field :password%>
     <%=f.submit %>
+   <%end%>
     </fieldset>
-<%end%>
+
 </body>
+<span class="line"></span>
+
+<footer>
+</footer>
 
 
-
-<%= form_with model: @person do |person_form| %>
-  <%= person_form.text_field :name %>
-  <%= fields_for :contact_detail, @person.contact_detail do |contact_detail_form| %>
-    <%= contact_detail_form.text_field :phone_number %>
-  <% end %>
-<% end %>
+</html>

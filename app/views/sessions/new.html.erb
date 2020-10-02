@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head>
 <span class="line"><p>
 <h2>Log In</h2></p>
 
@@ -7,7 +8,9 @@
 <%if @error%>
 <p><%=@error%></p>
 <%end%>
+</head>
 </span><br>
+
 <b>
 <fieldset>
 <div id="pDIV">
@@ -22,9 +25,12 @@
   </b>
     <%end%>
     <span class="line"></span>
-    
+   
     <footer>
 
     <%=button_to "Use Google to log in", '/auth/google_oauth2'%>
 </footer>
+
+ 
+
     </html>

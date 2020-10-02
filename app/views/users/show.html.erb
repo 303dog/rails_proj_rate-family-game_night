@@ -1,19 +1,25 @@
-<h1>Users Show</h1>>
-
-<h2>You are currently logged in as<%=current_user.username%></h2>
-
+<!DOCTYPE html>
+<html>
+<b>
+    <p><%=link_to "Browse Games", games_path%></p>
+</b>
+<h2>Reviews by:<u><%=current_user.username%></u></h2>
 
 <body>
-<%current_user.reviews.each do |rev|%>
-   <p> <%=link_to rev.label, review_path(rev)%></p>
-    <%end%><br>
+
+    <div class="row">
+        <b><p><%current_user.reviews.each do |rev|%></p></div>
+
+        <div class="column">Rating *<%=rev.rating%>*</p></b>
+
+            <div class="card"><p>Game: <b><%=rev.game.title%></b></p><p>Review Title: <b><%=link_to rev.label, review_path(rev)%></p></b><p>Last updated <%=rev.updated_at.strftime("%m-%d-%y")%></p>
+             </div>
+        <%end%>
+    </div>
 
 </body>
 
 
-<b>
-<%=link_to "Browse Games", games_path%><br>
-<br>
-<%=link_to "Give A Review", new_review_path%><br>
-<br>
-</b>
+<footer>
+</footer>
+</html>

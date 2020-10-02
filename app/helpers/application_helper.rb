@@ -16,8 +16,25 @@ module ApplicationHelper
         end
     end
 
+    def edit_delete
+        if @review.user == current_user
+            link_to('  Edit Your Review', edit_review_path)
+        else
+            
+        end
+    end
+
+
     def render_home
         link_to(' Home', '/users')
+    end
+
+    def current_users_page
+        if current_user
+            link_to "My Reviews", '/users/show'
+        else
+            ""
+        end
     end
 end
 
