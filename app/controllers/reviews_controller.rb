@@ -39,17 +39,13 @@ class ReviewsController < ApplicationController
         @review = Review.find_by_id(params[:id])
         @review.update(review_params)
         redirect_to review_path
-        #@review.update(params.require(:review).permit#(:label, :summary, :rating, :game_id))
-        #redirect_to review_path(@review)
+  
     end
 
-    def delete
-       # if current_user = session[:id]
-       #     @review.destroy
-       # else
-
-        @review.delete
-        redirect_to user_path
+    def destroy
+        @review = Review.find(params[:id])
+        @review.destroy
+        redirect_to users_path
     end
 
  

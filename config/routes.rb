@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   #delete '/delete', to: 'reviews#destroy'
   
-  #resources :reviews
+  
   
   resources :users 
   resources :reviews
