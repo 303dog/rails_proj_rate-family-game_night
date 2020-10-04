@@ -24,7 +24,6 @@ module ApplicationHelper
         end
     end
 
-
     def render_home
         link_to(' Home', '/users')
     end

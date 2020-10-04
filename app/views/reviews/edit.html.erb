@@ -15,7 +15,7 @@
 </fieldset>
 <span class="line"></span>
 <footer>
-<%=link_to "Destroy", review_path(@review), method: :delete, data: { confirm: "Are you sure?"}%>
-<!--<%= link_to "Delete", game_review_path(:id)%>-->
+<%=button_to "Destroy", review_path(@review), method: :delete, data: { confirm: "Are you sure?"}%>
+
 </footer>
 
