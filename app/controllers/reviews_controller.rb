@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
     end
 
     def show
-        @review = Review.find_by_id(params[:id])
+        set_review
     end
 
     def index 
@@ -28,17 +28,16 @@ class ReviewsController < ApplicationController
     end
 
     def edit
-        @review = Review.find_by_id(params[:id])
+        set_review
         if @review.user == current_user
         @game = @review.game
         end
     end
 
     def update 
-        @review = Review.find_by_id(params[:id])
+        set_review
         @review.update(review_params)
         redirect_to review_path
-  
     end
 
     def destroy
@@ -54,6 +53,9 @@ class ReviewsController < ApplicationController
         params.require(:review).permit(:label, :summary, :rating, :game_id)
     end
 
+    def set_review
+        @review = Review.find_by_id(params[:id])
+    end
     
 
 

@@ -1,26 +1,26 @@
 
 <!DOCTYPE html>
     <html>
-        <%=link_to "/  Back to the Games", games_path%><br>
-        <br>
-
-        <span class="line">
-            <p><u><h2><%= @game.title %></h2></u></p>
-        </span>
-
-        <div id="dDIV">
-            <p><b>Genre:</b><em><%= @game.genre %></em></p>
-            <p><b>Game Theme:</b> <em><%= @game.theme %></em></p>
-            <p><b>Allowed Players:</b> <em><%= @game.num_of_players %></em></p>
-            <p><b>Game Description:</b> <em><%= @game.description %></em></p>
-        </div>
-
-        <footer>
-            <p><b><%=link_to "Edit This Game", edit_game_path(@game)%></p>
-            <p><%=link_to "Review this game", new_game_review_path(@game)%></p>
-            <p><b><p><h4>Do you know about a game we would like?</h4> </P><%=link_to "Submit A New Game", new_game_path%></p></b>
+    <%=link_to "/  Back to the Games", games_path%><br>
+    <br>
     
-        </footer>
-
+    <span class="line">
+    <p><u><h2><%= @game.title %></h2></u></p>
+    </span>
+    
+    <div id="dDIV">
+    <p><b>Genre:</b><em><%= @game.genre %></em></p>
+    <p><b>Game Theme:</b> <em><%= @game.theme %></em></p>
+    <p><b>Allowed Players:</b> <em><%= @game.num_of_players %></em></p>
+    <p><b>Game Description:</b> <em><%= @game.description %></em></p>
+    </div>
+    
+    <footer>
+    <p><b><%=link_to "Edit This Game", edit_game_path(@game)%></p>
+    <p><%=link_to "Review this game", new_game_review_path(@game)%></p>
+    <p><b><p><h4>Do you know about a game we would like?</h4> </P><%=link_to "Submit A New Game", new_game_path%></p></b>
+    
+    </footer>
+    
     </html>
 
