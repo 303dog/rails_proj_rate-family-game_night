@@ -6,7 +6,8 @@ class GamesController < ApplicationController
     end
 
     def show
-        @game = Game.find_by_id(params[:id])
+        set_game
+        #@game = Game.find_by_id(params[:id])
     end
 
     def new
@@ -23,27 +24,31 @@ class GamesController < ApplicationController
     end
 
     def edit 
-        @game = Game.find_by_id(params[:id])
+        set_game
+        #@game = Game.find_by_id(params[:id])
     end
 
     def update 
-        @game = Game.find_by_id(params[:id])
+        set_game
+        #@game = Game.find_by_id(params[:id])
         @game.update(game_params)
         redirect_to game_path
     end
 
-    def destroy
-        @game = Game.find(params[:id])
-        @game.destroy
-        redirect_to games_path
-    end
-
-
+   # def destroy
+   #     @game = Game.find(params[:id])
+   #     @game.destroy
+   #     redirect_to games_path
+   # end
 
     private
 
     def game_params
         params.require(:game).permit(:genre, :theme, :num_of_players, :title, :description)
+    end
+
+    def set_game
+        @game = Game.find_by_id(params[:id])
     end
 
 end

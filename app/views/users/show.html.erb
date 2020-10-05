@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html>
-<b>
-    <p><%=link_to "Browse Games", games_path%></p>
-</b>
-<h2><u><%=current_user.username%></u> posted reviews:</h2>
+    <html>
+    <b>
+        <p><%=link_to "Browse Games", games_path%></p>
+    </b>
+        <h2>These are all of <u><%=current_user.username%></u> posted reviews:</h2>
 
-<body>
+    <body>
+    <span class="line"></span>
+        <div class="row">
+            <b><p><%current_user.reviews.each do |rev|%></p>
+        </div>
+            <div class="column">Rating *<%=rev.rating%>*</p></b>
+            <div class="card"><p>Game: <b><%=rev.game.title%></b></p><p>Review Title: <b><%=link_to rev.label, review_path(rev) %></p></b><p>Last updated <%=rev.updated_at.strftime("%m-%d-%y")%></p>
+                <%end%>
+        </div>
+        </div>
 
-    <div class="row">
-        <b><p><%current_user.reviews.each do |rev|%></p></div>
-
-        <div class="column">Rating *<%=rev.rating%>*</p></b>
-
-            <div class="card"><p>Game: <b><%=rev.game.title%></b></p><p>Review Title: <b><%=link_to rev.label, review_path(rev)%></p></b><p>Last updated <%=rev.updated_at.strftime("%m-%d-%y")%></p>
-             </div>
-        <%end%>
-    </div>
-
-</body>
+    </body>
 
 
-<footer>
-</footer>
-</html>
+
+    </html>

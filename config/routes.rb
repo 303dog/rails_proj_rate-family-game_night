@@ -7,17 +7,9 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: "sessions#destroy"
-
-  #delete '/delete', to: 'reviews#destroy'
-  
-  
   
   resources :users 
   resources :reviews
-
-  resources :users do 
-    resources :reviews
-  end
 
   resources :reviews do 
     resources :users
@@ -28,9 +20,5 @@ Rails.application.routes.draw do
   resources :games do
     resources :reviews
   end
-
-
-
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
 end

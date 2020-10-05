@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
- <%=link_to "/  Back", games_path%>
+    <html>
+        <%=link_to "/  Back", games_path%>
 
-    <span class="line"><p>
-     <h2>Game Edit:</h2></p>
-    </span><br>
+        <span class="line"><p>
+            <h2>Game Edit:</h2></p>
+        </span>
+        <br>
 
-    <fieldset>
-        <div id="fDIV">
-            <%=render 'form', game: @game%>
-        </div>
-    </fieldset>
-<span class="line"></span>
-<footer>
-</footer>
-</html>
+        <fieldset>
+            <div id="fDIV">
+                <%=render 'form', game: @game%>
+            </div>
+        </fieldset>
+        <span class="line"></span>
+        <footer>
+        </footer>
+    </html>

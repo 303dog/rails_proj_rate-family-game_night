@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>RailsProjRateFamilyGameNight</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <html>
+    <head>
+      <title>RailsProjRateFamilyGameNight</title>
+          <%= csrf_meta_tags %>
+          <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-  <b><!--<%=render_navigation%>--></b>
-  <b><center><%=render_home%> <%=render_logout%><center></b>
-  
-  
-   
-    <%= yield %>
-  </body>
-</html>
+          <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+          <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    <body>
+    
+      <b><center><%=render_home%> <%=render_logout%><center></b>
+
+
+
+        <%= yield %>
+    </body>
+  </html>

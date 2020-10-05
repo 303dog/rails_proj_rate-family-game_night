@@ -20,7 +20,7 @@ module ApplicationHelper
         if @review.user == current_user
             link_to('  Edit Your Review', edit_review_path)
         else
-            
+            ""
         end
     end
 

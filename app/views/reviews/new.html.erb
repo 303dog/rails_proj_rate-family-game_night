@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html>
+    <html>
 
-<%=link_to "/  Back", games_path(@games)%>
-  <span class="line">
-<%if @game%>
-    <h2>Add Your Review for <u><%=@game.title%></u></h2>
-<%else%>
-    <h2>Add Your Review</h2>
-<%end%>
-</span>
-<br>
+        <%=link_to "/  Back", games_path(@games)%>
+    <span class="line">
+        <%if @game%>
+            <h2>Add Your Review for <u><%=@game.title%></u></h2>
+        <%else%>
+            <h2>Add Your Review</h2>
+        <%end%>
+    </span>
+    <br>
 
 
-<fieldset>
-<p><%=form_for @review do |f|%>
-<%if @game%>
-    <%= f.hidden_field :game_id, value: @game.id%>
-<%else%>
-<%= f.label "Select which game you want to review"%><br>
-    <%= f.collection_select :game_id, Game.all, :id, :title %><br><br>
-<%end%>
-    <%= f.label :rating, "Rate it! Score the game 1-5"%><br>
-    <%= f.number_field :rating%><br>
-    <%= f.label :label, "Title" %><br>
-    <%= f.text_field :label, :maxlength => 25 %><br><br>
-    <%= f.label :summary, "Review"%><br>
-    <%= f.text_area :summary, :maxlength => 600%><br>
-    <br></p>
-    <%= f.submit %>
+    <fieldset>
+        <p><%=form_for @review do |f|%>
+            <%if @game%>
+                <%= f.hidden_field :game_id, value: @game.id%>
+            <%else%>
+                <%= f.label "Select which game you want to review"%><br>
+                <%= f.collection_select :game_id, Game.all, :id, :title %><br><br>
+            <%end%>
+                <%= f.label :rating, "Rate it! Score the game 1-5"%><br>
+                <%= f.number_field :rating%><br>
+                <%= f.label :label, "Title" %><br>
+                <%= f.text_field :label, :maxlength => 25 %><br><br>
+                <%= f.label :summary, "Review"%><br>
+                <%= f.text_area :summary, :maxlength => 600%><br><br></p>
+                <%= f.submit %>
+                <%end%>
     </fieldset>
-<%end%>
-<span class="line"></span>
-<footer>
-</footer>
-</html>
+            
+    <span class="line"></span>
+    <footer>
+    </footer>
+    </html>

@@ -23,8 +23,7 @@ class ReviewsController < ApplicationController
         @reviews = if params[:game_id]
                     Review.find_by_game_id(params[:game_id]).alpha_order
         else
-            Review.alpha_order.all
-            
+            Review.alpha_order.all 
         end
     end
 

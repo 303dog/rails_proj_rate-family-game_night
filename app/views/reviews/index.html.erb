@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <b>
-  <p><%=link_to "Browse Games", games_path%></p>
-  <p><%=current_users_page%></p>
-  </b>
-</head>
+  <html>
+    <head>
+      <b>
+        <p><%=link_to "Browse Games", games_path%></p>
+        <p><%=current_users_page%></p>
+      </b>
+    </head>
 
-<body>
-  <h2><u>Library of Games</u></h2>
+  <body>
 
- 
-    <div class="row"><%@reviews.each do |rev|%></div>
+    <h2><u>User Submitted Reviews</u></h2>
+      <span class="line"></span>
+        <div class="row"><%@reviews.each do |rev|%></div>
+          <div class="column"><b><h3><%=rev.game.title%></h3></p></b>
+            <div class="card"><p><%=link_to rev.label, review_path(rev)%></p> by:<%=rev.user.username%></div>
+          </div>
+        <%end%>
+  </body>
 
-      <div class="column"><b><h3><%=rev.game.title%></h3></p></b>
-
-        <div class="card"><p><%=link_to rev.label, review_path(rev)%></p> by:<%=rev.user.username%></div></div>
-    <%end%>
-</body>
-
-<footer>
-
-</footer>
+  <footer>
+  </footer>
 
 
-</html>
+  </html>

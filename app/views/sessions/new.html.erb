@@ -1,36 +1,32 @@
 <!DOCTYPE html>
-<html>
-<head>
-<span class="line"><p>
-<h2>Log In</h2></p>
+  <html>
+    <head>
+      <span class="line"><p>
+        <h2>Log In</h2></p>
 
 
-<%if @error%>
-<p><%=@error%></p>
-<%end%>
-</head>
-</span><br>
+          <%if @error%>
+            <p><%=@error%></p>
+          <%end%>
+    </head>
+      </span>
+      <br>
 
-<b>
-<fieldset>
-<div id="pDIV">
-<%=form_for :user do |f|%>
-    <%=f.label :username%>
-    <%=f.text_field :username%><br>
-    <%=f.label :password%>
-    <%=f.password_field :password%>
-    <%=f.submit "Log in"%>
-</div>
-</fieldset>
-  </b>
-    <%end%>
+    <fieldset>
+      <div id="pDIV"><b>
+        <%=form_for :user do |f|%>
+        <%=f.label :username%>
+        <%=f.text_field :username%><br>
+        <%=f.label :password%>
+        <%=f.password_field :password%>
+        <%=f.submit "Log in"%></b>
+        <%end%>
+      </div>
+    </fieldset>
+      
     <span class="line"></span>
-   
     <footer>
+      <%=button_to "Use Google to log in", '/auth/google_oauth2'%>
+    </footer>
 
-    <%=button_to "Use Google to log in", '/auth/google_oauth2'%>
-</footer>
-
- 
-
-    </html>
+  </html>

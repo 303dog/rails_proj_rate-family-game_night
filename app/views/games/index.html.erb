@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html>
-<body>
-<span class="line">
-<p><h2>Game Library</h2></p>
-</div>
+    <html>
+        <body>
+            <span class="line">
+                <p><h2>Game Library</h2></p>
+            </div>
 
+            <div id="gmDIV"><ul>
+                <%@games.each do |gam| %>
+            <p><b><%=link_to gam.title, game_path(gam)%></b></p>
+                <% end %></ul>
+            </div>
+        
+            <span class="line"></span>
 
-<div id="gmDIV">
-<% @games.each do |gam| %>
-<p><b><%=link_to gam.title, game_path(gam)%></b></p>
-<% end %>
-</div>
-<span class="line"></span>
-
-
-
-<footer>
-<p><%=link_to "Submit A Game", new_game_path%></p>
-<p><%=link_to "Read Game Review", reviews_path%></p>
-</footer>
-</body>
-</html>
+            <footer>
+                <p><%=link_to "Submit A Game", new_game_path%></p>
+                <p><%=link_to "Read Game Review", reviews_path%></p>
+            </footer>
+        </body>
+    </html>

@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id 
             redirect_to reviews_path
         else
-            @error = 'Invalid Credentials Please try again'
+            @error = 'Something you entered did not match, try again.'
             render :new
         end
     end

@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html>
-<span class="line">
-<h2>Review of <u><%=@review.game.title%></u></h2>
-<b>*REVIEWED BY: <%=@review.user.username%> on <%=@review.game.created_at.strftime("%m-%d-%y")%><br>
-<br>
-</span>
+    <html>
+        <span class="line">
+            <h2>Review of <u><%=@review.game.title%></u></h2>
+            <b>*REVIEWED BY: <%=@review.user.username%> on <%=@review.game.created_at.strftime("%m-%d-%y")%><br>
+            <br>
+        </span>
 
-<body>
-<p><h3><u><%=@review.label%></u></h3></p>
-<p><b><%=@review.game.title%></p>
-<p><em><%=@review.summary%></em></b></p>
-</body>
-<div id="dDIV">
+        <body>
+            <p><h3><u><%=@review.label%></u></h3></p>
+            <p><b><%=@review.game.title%></p>
+            <p><em><%=@review.summary%></em></b></p>
+        </body>
+        
+        <div id="dDIV"></div>
 
-</div>
-
-<footer>
-<p><em><%=edit_delete%></em></p>
-<!--%=link_to "Edit this Review", edit_review_path%><br>-->
-
-<p><%=link_to "Review a different game", new_review_path%></p>
-<p><%=link_to "Back to the Games", games_path%></p>
-</footer>
-</html>
+        <footer>
+            <p><em><%=edit_delete%></em></p>
+            <p><%=link_to "Review a different game", new_review_path%></p>
+            <p><%=link_to "Back to the Games", games_path%></p>
+        </footer>
+    </html>
