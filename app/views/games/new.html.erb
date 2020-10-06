@@ -5,7 +5,7 @@
 
 
 <fieldset><div id="fDIV">
-    <%=@game.errors[:title]%><%end%>
+   
 <p><%= form_for @game do |f| %>
     <%= f.label :title%><br>
     <%= f.text_field :title, :maxlength => 20 %><br><br>
@@ -26,4 +26,4 @@
 </footer>
   
 
-    </html>
+</html>
