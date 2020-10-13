@@ -1,5 +1,5 @@
 module ApplicationHelper  
-
+    #misc navigation
     def render_navigation
         if session[:user_id]
             link_to "Logout", '/logout', method: "delete"
