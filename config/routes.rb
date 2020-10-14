@@ -11,10 +11,6 @@ Rails.application.routes.draw do
   resources :users 
   resources :reviews
 
- # resources :reviews do 
- #   resources :users
- # end
-
   get '/auth/:provider/callback', to: 'sessions#omniauth'
   
   resources :games do

@@ -18,6 +18,7 @@ class GamesController < ApplicationController
         if @game.save
             redirect_to game_path(@game)
         else
+            @error = "Missing Information, Try Again."
             render :new
         end
     end

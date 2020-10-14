@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
         if @review.save
             redirect_to review_path(@review)
         else
+            @error = "Missing Information, Try Again."
             render :new
         end
     end

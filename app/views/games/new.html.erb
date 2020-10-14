@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <%=link_to "Back", games_path%>
+  <head>
 <h2> What game do you want to share?</h2>
-
-
+ 
+</head>
 <fieldset><div id="fDIV">
    
 <p><%= form_for @game do |f| %>
@@ -18,6 +19,9 @@
     <%= f.label :description, "Description of game.  This not a review."%><br>
     <%= f.text_area :description, :maxlength => 600%><br>
 <br></p>
+     <%if @error%>
+            <p><%=@error%></p>
+          <%end%>
     <%= f.submit %>
     <% end %></div>
     </fieldset>
