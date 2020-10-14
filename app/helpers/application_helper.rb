@@ -30,7 +30,7 @@ module ApplicationHelper
 
     def current_users_page
         if current_user
-            link_to "My Reviews", '/users/show'
+            link_to "My Reviews", user_path(current_user)
         else
             ""
         end
