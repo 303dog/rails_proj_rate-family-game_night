@@ -34,12 +34,14 @@
 
  header {
     background-image: url('apps_pic.jpg');
+    opacity: 0.75;
     background-blend-mode:normal;
     background-color: rgb(250, 244, 244);
     padding: 80px;
     text-align: center;
     font-size: 35px;
     color: rgb(5, 0, 0);
+    
   } 
  
 body {
