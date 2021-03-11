@@ -1,6 +1,7 @@
 README
 
 Family Game Night (https://github.com/rails_proj_rate-family-game_night.git)
+A Ruby on Rails / JavaScript application
 Fork and clone into your terminal and run a migration.
 Start up the rails server by typing "rails s" into the terminal and then open your browser and navigate to 
 https://localhost:3000
