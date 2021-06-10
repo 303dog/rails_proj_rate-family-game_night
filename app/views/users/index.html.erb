@@ -4,34 +4,44 @@
     <b>
       <>
     <header>
-    <div class="home-img">
+    <div class="user__main">
     <center><h1 class="glow">Family Game Night</h1></center>
     </div>
     </header>
     
     <body>
         <section>
-            <nav>
-                <ul>
+            
+                <ul class='user-menu'>
                 <p><li><%=render_navigation%></li></p>
                 <p><li><%=current_users_page%></li></p>
                 <p><li><%=link_to "Game Library", games_path%></li></p>
                 <p><li><%=link_to "Game Reviews", reviews_path%></li></p>
                 </ul>
-            </nav>
+            
         <article>
             <h1>Welcome to our family game night!</h1>
-               <p>Today, it isn't uncommon for families and friends to be seperated by statelines, mountain ranges and even oceans but that doesn't mean you can't get together for game night!  
+               <p>Today, it is increasingly more common for families and friends to be seperated by statelines, mountain ranges and even oceans but that doesn't mean you can't get together for the tradtional family game night!  
                 This app aims at providing information on popular games and puzzles that you can play with your family and    friends no matter the logistical hurdles in thier way.
                 </p> 
 
-                <p>Our library is filled with games that are in one way or another meant to be played as a group. Some games may not be multiplayer but offer features like "aliances", "clubs" or "teams" that can be configured in such a way that benefits your group the best. These features are great for building a special kind of comradery and help make the game play more interactive and fun!
+                <p>This library is filled with games that are in one way or another meant to be played as a group. Some games may not be multiplayer but offer features like "aliances", "clubs" or "teams" that can be configured in such a way that benefits your group the best. These features are great for building a special kind of comradery and help make the game play more interactive and fun!
                 </p>
         </article>
         </section>
         <footer>
-            <p>YOU MUST BE LOGGED IN BEFORE I CAN GIVE YOU ACCESS TO OUR LIBRARY</p>
+            <p>LOG-IN to see what's inside!</p>
         </footer>
     </b>
     </body>
+
 </html>
+
+    <script>
+  document.write(
+    '<script src="http://' +
+      (location.host || '${1:localhost}').split(':')[0] +
+      ':${2:35729}/livereload.js?snipver=1"></' +
+      'script>'
+  );
+</script>
