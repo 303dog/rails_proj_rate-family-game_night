@@ -4,9 +4,9 @@
         <body>
             <span class="line"></span>
                 <p><u><h2>Game Library</h2><u></p>            
-            <div class="game__row"><%@games.each do |gam|%>
-            <div class="game__column">
-            <div class="game__card">
+            <div class="game__row_cards"><%@games.each do |gam|%>
+            <div class="game__column_card">
+            <div class="game__card_card">
             <p><b><%=link_to gam.title, game_path(gam)%></b></p> 
             <%=gam.description%>
             </div>
