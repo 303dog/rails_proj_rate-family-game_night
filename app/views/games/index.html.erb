@@ -2,11 +2,12 @@
     <html>
         
         <body>
-            <span class="line"></span>
+            <div class="line">
                 <p><u><h2>Game Library</h2><u></p>            
-            <div class="game__row_cards"><%@games.each do |gam|%>
-            <div class="game__column_card">
-            <div class="game__card_card">
+            </div>
+            <div class="game__cards"><%@games.each do |gam|%>
+            <div class="game__card">
+            <div class="games__cards">
             <p><b><%=link_to gam.title, game_path(gam)%></b></p> 
             <%=gam.description%>
             </div>

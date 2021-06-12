@@ -9,14 +9,23 @@
 
   <body>
 
+      <div class="line">
     <h2><u>User Submitted Reviews</u></h2>
-      <span class="line"></span>
-        <div class="row"><%@reviews.each do |rev|%></div>
-          <div class="column"><b><h3><%=rev.game.title%></h3></p></b>
-            <div class="card"><p><%=link_to rev.label, review_path(rev)%></p> by:<%=rev.user.username%></div>
+    </div>
+    <div class='review__cards'>
+    <b>
+    <p><%@reviews.each do |rev|%></p>
+      <div class='review__card'>
+      Rating *<%=rev.rating%>
+       </b>
+        <div class="reviews__cards">
+          <b><h3><%=rev.game.title%></h3></p></b>
+            <p><%=link_to rev.label, review_path(rev)%></p>
+             by:<%=rev.user.username%>
           </div>
-          
+        </div>
         <%end%>
+        </div>
   </body>
 
   <footer>

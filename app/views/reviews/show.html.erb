@@ -1,15 +1,17 @@
 <!DOCTYPE html>
     <html>
-        <span class="line">
+        <div class="line">
             <h2>Review of <u><%=@review.game.title%></u></h2>
             <b>*REVIEWED BY: <%=@review.user.username%> on <%=@review.game.created_at.strftime("%m-%d-%y")%><br>
             <br>
-        </span>
+        </div>
 
         <body>
+        <div class='review__show'>
             <p><h3><u><%=@review.label%></u></h3></p>
             <p><b><%=@review.game.title%></p>
             <p><em><%=@review.summary%></em></b></p>
+            </div>
         </body>
         
         <div id="dDIV"></div>
