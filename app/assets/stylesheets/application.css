@@ -1,15 +1,19 @@
-
 html {
-  background-color: lightgrey;
+  background: url("tetrisBg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 
 article {
   width: 70%;
-  font-size:150%;
+  font-size: 150%;
 }
 
 body {
-  margin: .5%;
+  margin: 0.5%;
   padding: 3%;
 }
 
@@ -17,12 +21,10 @@ body {
   border: 1px white;
 }
 
-
-
 header {
   background: rgb(252, 119, 10);
   border-radius: 90% 10%;
-  margin:4%;
+  margin: 4%;
 }
 
 .user-menu {
@@ -50,8 +52,6 @@ li :hover {
   height: auto;
 }
 
-
-
 .glow {
   font-size: 80px;
   color: #fff;
@@ -75,22 +75,21 @@ li :hover {
 
 section {
   box-sizing: content-box;
+  color: white;
   width: 90%;
   border: 5px solid white;
-  background-color: pink;
+  background: url("Comic-book.png");
   margin: auto;
   padding: auto;
 }
 
 /*sessions*/
 
-
-
 .login {
-  width: 300px;  
-  border: none;  
-  border-radius: 3px;  
-  padding-left: 8px;  
+  width: 300px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
   border-style: double;
   border-color: rgb(253, 253, 253);
   padding: 20px;
@@ -105,23 +104,22 @@ section {
   padding: 20px;
 }
 
-label{  
+label {
   padding: 12px 12px 12px 0;
-  display: inline-block;  
-  font-size: 17px;  
-} 
-
-
+  display: inline-block;
+  font-size: 17px;
+}
 
 /*common styles*/
 
-.review__card, .user_show_card {
+.review__card,
+.user_show_card {
   background-color: #78aebe;
 }
 
 .line {
   background-color: #e5ebe6;
-  border-width:7px; 
+  border-width: 7px;
   border-style: double;
   border-color: #78aebe;
   border-radius: 2%;
@@ -132,23 +130,23 @@ label{
 }
 /* users show */
 
-.user_show_card, a:hover {
+.user_show_card,
+a:hover {
   box-shadow: 0 0 5px black;
   margin: auto;
   padding: auto;
-  
 }
 
 .user_show_cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 2px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .users_shows_cards {
   background-color: #e5ebe6;
-  border-width:7px; 
+  border-width: 7px;
   border-style: double;
   border-color: #78aebe;
   border-radius: 2%;
@@ -160,11 +158,9 @@ label{
 
 /*reviews show*/
 
-
-
 .review__show {
   background-color: #e5ebe6;
-  border-width:7px; 
+  border-width: 7px;
   border-style: double;
   border-color: #78aebe;
   border-radius: 2%;
@@ -176,7 +172,8 @@ label{
 
 /* reviews index */
 
-.review__card, a:hover {
+.review__card,
+a:hover {
   box-shadow: 0 0 5px black;
   margin: auto;
   padding: auto;
@@ -186,12 +183,12 @@ label{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 2px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .reviews__cards {
   background-color: #e5ebe6;
-  border-width:7px; 
+  border-width: 7px;
   border-style: double;
   border-color: #78aebe;
   border-radius: 5%;
@@ -223,7 +220,8 @@ label{
 }
 /*game views */
 
-.game__card, a:hover {
+.game__card,
+a:hover {
   box-shadow: 0 0 5px black;
   margin-top: -10px;
 }
@@ -232,12 +230,12 @@ label{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .games__cards {
   background-color: #e5ebe6;
-  border-width:7px; 
+  border-width: 7px;
   border-style: double;
   border-color: #78aebe;
   border-radius: 5%;
@@ -247,13 +245,11 @@ label{
   transition: 0.5s;
 }
 
-
-
 /*footer */
 
 footer {
- background: rgb(169, 170, 172);
- margin: 0;
- padding: 0;
- width: auto;
+  background: rgb(169, 170, 172);
+  margin: 0;
+  padding: 0;
+  width: auto;
 }
