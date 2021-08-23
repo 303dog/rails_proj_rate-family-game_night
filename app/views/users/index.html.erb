@@ -12,11 +12,11 @@
     <body>
         <section>
             
-                <ul class='user-menu'>
+                <ul class='user__menu'>
                 <p><li><%=render_navigation%></li></p>
                 <p><li><%=current_users_page%></li></p>
-                <p><li><%=link_to "Game Library", games_path%></li></p>
-                <p><li><%=link_to "Game Reviews", reviews_path%></li></p>
+                <p><li><%=link_to "Game Library", games_path, style: "color: white;"%></li></p>
+                <p><li><%=link_to "Game Reviews", reviews_path, style: "color: white;"%></li></p>
                 </ul>
             
         <article>
@@ -29,19 +29,11 @@
                 </p>
         </article>
         </section>
-        <footer>
-            <p>LOG-IN to see what's inside!</p>
-        </footer>
     </b>
     </body>
+        <footer>
+             <%=button_to "Use Google to log in", '/auth/google_oauth2'%>
+        </footer>
 
 </html>
 
-    <script>
-  document.write(
-    '<script src="http://' +
-      (location.host || '${1:localhost}').split(':')[0] +
-      ':${2:35729}/livereload.js?snipver=1"></' +
-      'script>'
-  );
-</script>

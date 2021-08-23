@@ -5,18 +5,20 @@
         </span>
         <br>
         <body>
+
+          <div class='login__container'>
+            <div class="login">
             <%=form_for @user do |f|%>
-        <fieldset>
                 <%=f.label :username %>
                 <%=f.text_field :username %>
                 <%=f.label :password %>
                 <%=f.password_field :password%>
                 <%=f.submit %>
             <%end%>
-        </fieldset>
-
+            </div>
+        </div>
         </body>
-            <span class="line"></span>
+           
         <footer>
             <%=button_to "Use Google to log in", '/auth/google_oauth2'%>
         </footer>

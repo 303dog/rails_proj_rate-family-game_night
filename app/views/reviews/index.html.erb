@@ -10,19 +10,19 @@
   <body>
 
       <div class="line">
-    <h2><u>User Submitted Reviews</u></h2>
+    <h2>User Submitted Reviews</h2>
     </div>
-    <div class='review__cards'>
+    <div class='cards-list'>
     <b>
     <p><%@reviews.each do |rev|%></p>
-      <div class='review__card'>
-      Rating *<%=rev.rating%>
-       </b>
-        <div class="reviews__cards">
+      <div class='card'>
           <b><h3><%=rev.game.title%></h3></p></b>
-            <p><%=link_to rev.label, review_path(rev)%></p>
-             by:<%=rev.user.username%>
+       </b>
+      Rating *<%=rev.rating%>
+        <div class="cards-owner">
+            <p><%=link_to 'Click Me', review_path(rev)%></p>
           </div>
+             by:<%=rev.user.username%>
         </div>
         <%end%>
         </div>
