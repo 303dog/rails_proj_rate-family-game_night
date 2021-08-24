@@ -11,7 +11,7 @@ html {
 
 /* top navigation links home and logout */
 .layout__nav {
-  color: rgb(255, 254, 254);
+  color: white;
 }
 
 article {
@@ -146,6 +146,20 @@ a:hover {
   height: 100%;
   width: fit-content;
   transition: 0.5s;
+}
+
+/* user index */
+
+.user__current {
+  background:  rgb(252, 119, 10);
+  border-radius: 95% 5%;
+}
+
+.user__current :hover {
+  background-color: rgb(62, 118, 195);
+  color: white;
+  width: auto;
+  height: auto;
 }
 
 /*reviews show*/
