@@ -5,10 +5,10 @@
             <div class="line">
                 <p><u><h2>Game Library</h2><u></p>            
             </div>
-            <div class="game__cards"><%@games.each do |gam|%>
-            <div class="game__card">
-            <div class="games__cards">
+            <div class="cards-list"><%@games.each do |gam|%>
+            <div class="card">
             <p><b><%=link_to gam.title, game_path(gam)%></b></p> 
+            <div class="cards-owner">
             <%=gam.description%>
             </div>
           </div>

@@ -4,16 +4,16 @@
     <%=link_to "/  Back to the Games", games_path%><br>
     <br>
     
-    <span class="line">
+    <div class="line">
     <p><u><h2><%= @game.title %></h2></u></p>
-    </span>
+    </div>
     
-    <div id="gshow_main">
+    <div class="review__show">
     <p class='gshow__players'><b>Players:</b> <em><%= @game.num_of_players %></em></p>
     <p class='gshow__genre'><b>Genre:</b><em><%= @game.genre %></em></p>
     <p class='gshow__theme'><b>Game Theme:</b> <em><%= @game.theme %></em></p>
     <div class='gshow__container'>
-    <p class='gshow__desc'><b>Game Description:</b> <em><%= @game.description %></em></p>
+    <p class='gshow__d2esc'><b>Game Description:</b> <em><%= @game.description %></em></p>
     </div>
     </div>
     <footer>
