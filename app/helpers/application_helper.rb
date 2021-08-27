@@ -1,5 +1,7 @@
 module ApplicationHelper  
     #misc navigation
+
+    # current_user is borrowed from application_controller via helper_method :current_user
     def render_navigation
         if session[:user_id]
             link_to "Logout", '/logout', method: "delete"
