@@ -3,16 +3,6 @@ class SessionsController < ApplicationController
     def new 
     end
     
-   # def create 
-   #     @game = Game.new(game_params)
-   #     if @game.save
-   #         redirect_to game_path(@game)
-   #     else
-   #         @error = "Missing Information, Try Again."
-   #         render :new
-   #     end
-   # end
-    
     def create 
         user = User.find_by(username: params[:user][:username])
         if  user && user.authenticate(params[:user][:password])

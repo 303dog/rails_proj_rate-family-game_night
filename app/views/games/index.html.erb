@@ -6,17 +6,15 @@
                 <p><u><h2>Game Library</h2><u></p>            
             </div>
             <div class="cards-list"><%@games.each do |gam|%>
-            <div class="card">
-            <p><b><%=link_to gam.title, game_path(gam)%></b></p> 
-            <div class="cards-owner">
-            <%=gam.description%>
+                <div class="card">
+                    <p><b><%=link_to gam.title, game_path(gam)%></b></p> 
+                    <div class="cards-owner">
+                    <%=gam.description%>
+                    </div>
+                </div>
+            <%end%>
             </div>
-          </div>
-        <%end%>
-            </div>
-        
             <footer>
-            <span class="line"></span>
                 <p><%=link_to "Submit A Game", new_game_path%></p>
                 <p><%=link_to "Game Reviews", reviews_path%></p>
             </footer>

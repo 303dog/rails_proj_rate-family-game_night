@@ -1,6 +1,4 @@
 
-
-
 html {
   background: url("tetrisBg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -13,7 +11,7 @@ html {
 .layout__nav {
   color: white;
 }
-
+/* home page welcom text*/
 article {
   width: 70%;
   font-size: 150%;
@@ -23,13 +21,23 @@ body {
   margin: 0.5%;
   padding: 3%;
 }
-
+/* home page title */
 header {
   background: rgb(252, 119, 10);
   border-radius: 90% 10%;
   margin: 4%;
 }
+/* home page welcome */
+section {
+  box-sizing: content-box;
+  color: white;
+  width: 90%;
+  border: 4px solid white;
+  margin: auto;
+  padding: auto;
+}
 
+/* home page selection menu*/
 .user__menu {
   margin: 0;
   padding: 4.5%;
@@ -51,7 +59,7 @@ li :hover {
   width: auto;
   height: auto;
 }
-
+/* home page title css effect*/
 .glow {
   font-size: 80px;
   color: #fff;
@@ -73,26 +81,31 @@ li :hover {
   }
 }
 
+
+/*sessions*/
 a {
   color: white;
 }
-
-/* home page welcome */
-
-section {
-  box-sizing: content-box;
-  color: white;
-  width: 90%;
-  border: 4px solid white;
-  margin: auto;
-  padding: auto;
-}
-
-/*sessions*/
 .login__container {
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-size: 17px;
+}
+
+/*common styles*/
+.edit-container {
+  border-width: 7px;
+  border-style: double;
+  border-color: #fa0808;
+  border-radius: 2%;
+  width: fit-content;
+  height: fit-content;
 }
 
 .login {
@@ -104,52 +117,13 @@ section {
   padding: 20px;
 }
 
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-  font-size: 17px;
-}
-
-/*common styles*/
-
-
-
 .line {
   width: 100%;
   height: 100%;
   width: fit-content;
   transition: 0.5s;
 }
-/* users show */
-
-.user_show_card,
-a:hover {
-  box-shadow: 0 0 5px black;
-  margin: auto;
-  padding: auto;
-}
-
-.user_show_cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 2px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.users_shows_cards {
-  background-color: #e5ebe6;
-  border-width: 7px;
-  border-style: double;
-  border-color: #78aebe;
-  border-radius: 2%;
-  width: 100%;
-  height: 100%;
-  width: fit-content;
-  transition: 0.5s;
-}
-
 /* user index */
-
 .user__current {
   background:  rgb(252, 119, 10);
   border-radius: 95% 5%;
@@ -161,9 +135,7 @@ a:hover {
   width: auto;
   height: auto;
 }
-
 /*reviews show*/
-
 .review__show {
   border-width: 7px;
   border-style: double;
@@ -173,28 +145,14 @@ a:hover {
   height: fit-content;
   transition: 0.5s;
 }
-
-.edit-container {
-  border-width: 7px;
-  border-style: double;
-  border-color: #fa0808;
-  border-radius: 2%;
-  width: fit-content;
-  height: fit-content;
-}
-
-
 /*footer */
-
 footer {
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 1%;
 }
-
-/* review cards*/
-
+/* review and game cards*/
 .cards-list {
   z-index: 0;
   width: 100%;

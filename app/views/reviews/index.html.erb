@@ -6,30 +6,26 @@
         <p><%=current_users_page%></p>
       </b>
     </head>
+    <body>
 
-  <body>
-
-      <div class="line">
-    <h2>User Submitted Reviews</h2>
-    </div>
-    <div class='cards-list'>
-    <b>
-    <p><%@reviews.each do |rev|%></p>
-      <div class='card'>
+        <div class="line">
+          <h2>User Submitted Reviews</h2>
+        </div>
+        <div class='cards-list'>
+        <b>
+            <p><%@reviews.each do |rev|%></p>
+        <div class='card'>
           <b><h3><%=rev.game.title%></h3></p></b>
-       </b>
-      Rating *<%=rev.rating%>
+          </b>
+            Rating *<%=rev.rating%>
         <div class="cards-owner">
             <p><%=link_to 'Click Me', review_path(rev)%></p>
-          </div>
-             by:<%=rev.user.username%>
         </div>
-        <%end%>
+            by:<%=rev.user.username%>
         </div>
-  </body>
-
-  <footer>
-  </footer>
+          <%end%>
+        </div>
+    </body>
 
 
   </html>

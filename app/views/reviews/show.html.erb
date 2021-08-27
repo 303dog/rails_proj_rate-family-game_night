@@ -7,15 +7,12 @@
         </div>
 
         <body>
-        <div class='review__show'>
-            <p><h3><u><%=@review.label%></u></h3></p>
-            <p><b><%=@review.game.title%></p>
-            <p><em><%=@review.summary%></em></b></p>
+            <div class='review__show'>
+                <p><h3><u><%=@review.label%></u></h3></p>
+                <p><b><%=@review.game.title%></p>
+                <p><em><%=@review.summary%></em></b></p>
             </div>
         </body>
-        
-        <div id="dDIV"></div>
-
         <footer>
             <p><em><%=edit_delete%></em></p>
             <p><%=link_to "Give a Game Review", new_review_path%></p>

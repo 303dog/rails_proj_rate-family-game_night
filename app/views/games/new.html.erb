@@ -6,28 +6,24 @@
  
 </head>
 <div class="login">
-   
-<p><%= form_for @game do |f| %>
-    <%= f.label :title%><br>
-    <%= f.text_field :title, :maxlength => 20 %><br><br>
-    <%= f.label :genre %><br>
-    <%= f.text_field :genre, :maxlength => 20 %><br>
-    <%= f.label :theme %><br>
-    <%= f.text_field :theme, :maxlength => 15 %><br>
-    <%= f.label :num_of_players %><br>
-    <%= f.number_field :num_of_players%><br>
-    <%= f.label :description, "Description of game.  This not a review."%><br>
-    <%= f.text_area :description, :maxlength => 600%><br>
-<br></p>
+    <p><%= form_for @game do |f| %>
+        <%= f.label :title%><br>
+        <%= f.text_field :title, :maxlength => 20 %><br><br>
+        <%= f.label :genre %><br>
+        <%= f.text_field :genre, :maxlength => 20 %><br>
+        <%= f.label :theme %><br>
+        <%= f.text_field :theme, :maxlength => 15 %><br>
+        <%= f.label :num_of_players %><br>
+        <%= f.number_field :num_of_players%><br>
+        <%= f.label :description, "Description of game.  This not a review."%><br>
+        <%= f.text_area :description, :maxlength => 600%><br>
+    <br></p>
      <%if @error%>
             <p><%=@error%></p>
           <%end%>
     <%= f.submit %>
-    <% end %></div>
+    <% end %>
+</div>
     
-    <div class="line"></span>
-<footer>
-</footer>
-  
 
 </html>

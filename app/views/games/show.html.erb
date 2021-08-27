@@ -5,23 +5,22 @@
     <br>
     
     <div class="line">
-    <p><u><h2><%= @game.title %></h2></u></p>
+        <p><u><h2><%= @game.title %></h2></u></p>
     </div>
     
     <div class="review__show">
-    <p class='gshow__players'><b>Players:</b> <em><%= @game.num_of_players %></em></p>
-    <p class='gshow__genre'><b>Genre:</b><em><%= @game.genre %></em></p>
-    <p class='gshow__theme'><b>Game Theme:</b> <em><%= @game.theme %></em></p>
-    <div class='gshow__container'>
-    <p class='gshow__d2esc'><b>Game Description:</b> <em><%= @game.description %></em></p>
+        <p class='gshow__players'><b>Players:</b> <em><%= @game.num_of_players %></em></p>
+        <p class='gshow__genre'><b>Genre:</b><em><%= @game.genre %></em></p>
+        <p class='gshow__theme'><b>Game Theme:</b> <em><%= @game.theme %></em></p>
+    <div>
+        <p><b>Game Description:</b> <em><%= @game.description %></em></p>
     </div>
     </div>
     <footer>
-    <p><b><%=link_to "This games reviews", game_reviews_path(@game)%><p>
-    <p><b><%=link_to "Edit This Game", edit_game_path(@game)%></p>
-    <p><%=link_to "Review this game", new_game_review_path(@game)%></p>
-    <p><b><p><h4>Do you know about a game we would like?</h4> </p><%=link_to "Submit A New Game", new_game_path%></p></b>
-    
+        <p><b><%=link_to "This games reviews", game_reviews_path(@game)%><p>
+        <p><b><%=link_to "Edit This Game", edit_game_path(@game)%></p>
+        <p><%=link_to "Review this game", new_game_review_path(@game)%></p>
+        <p><b><p><h4>Do you know about a game we would like?</h4> </p><%=link_to "Submit A New Game", new_game_path%></p></b>
     </footer>
     
     </html>
