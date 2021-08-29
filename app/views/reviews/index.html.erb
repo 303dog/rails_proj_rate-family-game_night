@@ -15,11 +15,11 @@
         <b>
             <p><%@reviews.each do |rev|%></p>
         <div class='card'>
-          <b><h3><%=rev.game.title%></h3></p></b>
+          <b><h3><%=link_to rev.game.title, review_path(rev)%></h3></p></b>
           </b>
             Rating *<%=rev.rating%>
-        <div class="cards-owner">
-            <p><%=link_to 'Click Me', review_path(rev)%></p>
+        <div class="cards-owner shadow">
+            <p><%=link_to 'Read More...', review_path(rev)%></p>
         </div>
             by:<%=rev.user.username%>
         </div>

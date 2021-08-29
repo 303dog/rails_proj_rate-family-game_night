@@ -1,4 +1,3 @@
-
 html {
   background: url("tetrisBg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -37,6 +36,11 @@ section {
   padding: auto;
 }
 
+.gshow {
+  background: rgb(250, 197, 224);
+  border-radius: 3%;
+  color: black;
+}
 /* home page selection menu*/
 .user__menu {
   margin: 0;
@@ -81,7 +85,6 @@ li :hover {
   }
 }
 
-
 /*sessions*/
 a {
   color: white;
@@ -125,7 +128,7 @@ label {
 }
 /* user index */
 .user__current {
-  background:  rgb(252, 119, 10);
+  background: rgb(252, 119, 10);
   border-radius: 95% 5%;
 }
 
@@ -141,9 +144,8 @@ label {
   border-style: double;
   border-color: #78aebe;
   border-radius: 2%;
-  width: fit-content;
-  height: fit-content;
-  transition: 0.5s;
+  width: 50%;
+  height: 50%;
 }
 /*footer */
 footer {
@@ -167,24 +169,30 @@ footer {
   height: 200px;
   border: 2px solid white;
   border-radius: 40px;
-  box-shadow: 5px 5px 30px 7px rgba(102, 107, 172, 0.25), -5px -5px 30px 7px rgba(192, 66, 66, 0.22);
+  box-shadow: 5px 5px 30px 7px rgba(102, 107, 172, 0.25),
+    -5px -5px 30px 7px rgba(192, 66, 66, 0.22);
   cursor: pointer;
   transition: 0.4s;
-
 }
 
 .card:hover {
   transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25), 
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
 }
 
 .cards-owner {
   background: rgb(36, 145, 199);
   width: 60%;
   border-radius: 40%;
-
 }
+
+.shadow:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
 @media all and (max-width: 500px) {
   .card-list {
     /* On small screens, we are no longer using row direction but column */

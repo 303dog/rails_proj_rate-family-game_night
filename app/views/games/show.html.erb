@@ -9,15 +9,15 @@
     </div>
     
     <div class="review__show">
-        <p class='gshow__players'><b>Players:</b> <em><%= @game.num_of_players %></em></p>
-        <p class='gshow__genre'><b>Genre:</b><em><%= @game.genre %></em></p>
-        <p class='gshow__theme'><b>Game Theme:</b> <em><%= @game.theme %></em></p>
+        <p class='gshow2'><b>Genre:</b><em><%= @game.genre %></em></p>
+        <p class='gamShow'><b>Game Theme:</b> <em><%= @game.theme %></em></p>
+        <p class='gshow2'><b>Players:</b> <em><%= @game.num_of_players %></em></p>
     <div>
-        <p><b>Game Description:</b> <em><%= @game.description %></em></p>
+        <p class='gshow2'><b>Game Description:</b> <em><%= @game.description %></em></p>
     </div>
     </div>
     <footer>
-        <p><b><%=link_to "This games reviews", game_reviews_path(@game)%><p>
+        <p class='user__current'><b><%=link_to "This games reviews", game_reviews_path(@game)%><p>
         <p><b><%=link_to "Edit This Game", edit_game_path(@game)%></p>
         <p><%=link_to "Review this game", new_game_review_path(@game)%></p>
         <p><b><p><h4>Do you know about a game we would like?</h4> </p><%=link_to "Submit A New Game", new_game_path%></p></b>

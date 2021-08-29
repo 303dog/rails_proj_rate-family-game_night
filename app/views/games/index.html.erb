@@ -6,11 +6,11 @@
                 <p><u><h2>Game Library</h2><u></p>            
             </div>
             <div class="cards-list"><%@games.each do |gam|%>
-                <div class="card">
+                <div class="card shadow">
                     <p><b><%=link_to gam.title, game_path(gam)%></b></p> 
-                    <div class="cards-owner">
-                    <%=gam.description%>
-                    </div>
+                        <div class="cards-owner shadow">
+                            <%=link_to gam.description, game_path(gam)%>
+                        </div>
                 </div>
             <%end%>
             </div>
