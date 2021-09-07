@@ -31,6 +31,31 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
 
+
+  #  If you use 2-factor authentication then go to your 
+  #  gmail security settings and you will see an option 
+  #  called ‘App passwords’ under the ‘Signing in to 
+  #  Google’ section. Clicking on this setting will 
+  #  allow you to generate a new password that can be 
+  #  used for your application. If you do not do this 
+  #  step then emails will never be generated. CODE BELOW
+
+  config.action_mailer_default_url_options = { host: 'https://your-app-site.com' }
+  Rails.application.routes.default_url_options[:host] = 'https://your-app-site.com'
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default charset: 'utf-8'
+  config.action_mailer.smtp_settings = {
+  address: 'smtp.gmail.com'
+  port: 587
+  domain: 'gmail.com'
+  authentication: 'plain'
+  enable_starttls_auto: true
+  user_name: ENV['GMAIL_USERNAME']
+  password: ENV['GMAIL_PASSWORD']
+}
+
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX

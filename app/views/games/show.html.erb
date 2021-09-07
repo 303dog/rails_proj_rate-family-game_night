@@ -4,6 +4,7 @@
     <%=link_to "/  Back to the Games", games_path%><br>
     <br>
     
+    <div class='main-div main-div3'>
     <div class="line">
         <p><u><h2><%= @game.title %></h2></u></p>
     </div>
@@ -22,6 +23,7 @@
         <p><%=link_to "Review this game", new_game_review_path(@game)%></p>
         <p><b><p><h4>Do you know about a game we would like?</h4> </p><%=link_to "Submit A New Game", new_game_path%></p></b>
     </footer>
+    </div>
     
     </html>
 
