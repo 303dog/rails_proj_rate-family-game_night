@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html>
         <div class="line">
-            <h2>Review of <u><%=@review.game.title%></u></h2>
+            <h2>Review of <p class='opp-rotate'><u class='game-prev'><%=@review.game.title%></u></p></h2>
             <b>*REVIEWED BY: <%=@review.user.username%> on <%=@review.game.created_at.strftime("%m-%d-%y")%><br>
             <br>
         </div>
@@ -14,8 +14,8 @@
             </div>
         </body>
         <footer>
-            <p><em><%=edit_delete%></em></p>
-            <p><%=link_to "Give a Game Review", new_review_path%></p>
-            <p><%=link_to "Back to the Games", games_path%></p>
+            <p class='user__current rotate'><em><%=edit_delete%></em></p>
+            <p class='link-box review-bx'><%=link_to "Give a Game Review", new_review_path%></p>
+            <p class='link-box btn-pink'><%=link_to "Back to the Games", games_path%></p>
         </footer>
     </html>

@@ -19,9 +19,9 @@
     </div>
     <footer>
         <p class='user__current'><b><%=link_to "This games reviews", game_reviews_path(@game)%><p>
-        <p><b><%=link_to "Edit This Game", edit_game_path(@game)%></p>
-        <p><%=link_to "Review this game", new_game_review_path(@game)%></p>
-        <p><b><p><h4>Do you know about a game we would like?</h4> </p><%=link_to "Submit A New Game", new_game_path%></p></b>
+        <p class='link-box edit-bx'><b><%=link_to "Edit This Game", edit_game_path(@game)%></p>
+        <p class='link-box review-bx'><%=link_to "Review this game", new_game_review_path(@game)%></p>
+        <p><b class='brush-mark'><h4 class='back-flow'>Do you know about a game we would like?</h4> </p><p  class='link-wht btn-yellow'><%=link_to "Submit A New Game", new_game_path%></p></b>
     </footer>
     </div>
     

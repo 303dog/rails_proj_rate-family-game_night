@@ -73,6 +73,14 @@ li :hover {
   animation: glow 1s ease-in-out infinite alternate;
 }
 
+.hyper {
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 4s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
 @keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px#3f0df5, 0 0 30px #00e60c,
@@ -154,6 +162,75 @@ footer {
   margin-right: 25%;
   margin-top: 1%;
 }
+
+.link-box {
+  border-style:double;
+  border-width: 7px;
+  border-color: rgb(177, 164, 248);
+  border-radius: 2%;
+}
+
+.edit-bx {
+  background-color: red;
+}
+
+.review-bx {
+  background-color: rgb(33, 146, 33);
+}
+
+.link-wht {
+  border-style:double;
+  border-width: 7px;
+  border-color: rgb(23, 4, 136);
+  border-radius: 2%;
+}
+
+.rotate {
+  animation: rotation 2s linear;
+}
+
+.opp-rotate {
+  animation: rotation-opp 2s linear;
+}
+
+@keyframes rotation-opp  {
+  from {
+    transform: rotate(358deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.game-prev {
+  transform: rotate(45deg);
+  background-color: rgb(122, 196, 37);
+}
+
+.brush-mark {
+  background: rgb(85, 75, 143);
+  border-radius: 99% 1%;
+}
+
+.back-flow {
+  background: rgb(85, 75, 143);
+  border-radius: 1% 99%;
+}
+
+.btn-pink {
+  background-color: rgb(245, 9, 194);
+  color: black;
+}
+
 /* review and game cards*/
 .cards-list {
   z-index: 0;
