@@ -168,6 +168,11 @@ footer {
   border-width: 7px;
   border-color: rgb(177, 164, 248);
   border-radius: 2%;
+  transition: width 2s;
+}
+
+.link-box:hover {
+  width: 200px;
 }
 
 .edit-bx {
@@ -183,6 +188,11 @@ footer {
   border-width: 7px;
   border-color: rgb(23, 4, 136);
   border-radius: 2%;
+  transition: width 2s;
+}
+
+.link-wht:hover {
+  width: 200px;
 }
 
 .rotate {
@@ -190,7 +200,7 @@ footer {
 }
 
 .opp-rotate {
-  animation: rotation-opp 2s linear;
+  animation: rotation-opp 1s linear;
 }
 
 @keyframes rotation-opp  {
@@ -211,9 +221,13 @@ footer {
   }
 }
 
+
+
 .game-prev {
   transform: rotate(45deg);
   background-color: rgb(122, 196, 37);
+  border: 1px solid black;
+  border-radius: 40%;
 }
 
 .brush-mark {
@@ -655,6 +669,39 @@ footer {
     width: 50%;
   }
 }
+
+
+/*---------------------------------------------------------*/
+
+
+.oneCandy {
+  margin-top: -17%;
+  height: 50%; 
+  width: 5%;
+  top: 50%;
+  font-size: 70px;
+  position: absolute;
+}
+.oneCandy:nth-of-type(1)  { animation: wave 17s   0.000s linear infinite; }
+.oneCandy:nth-of-type(2)  { animation: wave 17s -16.227s linear infinite; }
+.oneCandy:nth-of-type(3)  { animation: wave 17s -15.455s linear infinite; }
+.oneCandy:nth-of-type(4)  { animation: wave 17s -14.682s linear infinite; }
+
+
+@keyframes wave {
+  0%   { left:-2%; }
+  10%  { height:10%; margin-top: -5%; }
+  20%  { height:34%; margin-top:-10%; }
+  30%  { height:10%; margin-top: -5%; }
+  40%  { height:34%; margin-top:-1%; }
+  50%  { height:10%; margin-top: -15%; }
+  60%  { height:34%; margin-top:-29%; }
+  70%  { height:10%; margin-top: -5%; }
+  80%  { height:34%; margin-top:-17%; }
+  90%  { height:10%; margin-top: -5%; }
+  100% { height:34%; margin-top:-27%; left:100%; }
+}
+
 
 @media all and (max-width: 500px) {
   .card-list {
