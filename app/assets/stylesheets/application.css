@@ -110,6 +110,11 @@ label {
 }
 
 /*common styles*/
+
+.hi-lite {
+  color: rgba(233, 250, 3, 0.986);
+}
+
 .edit-container {
   border-width: 7px;
   border-style: double;
@@ -224,10 +229,8 @@ footer {
 
 
 .game-prev {
-  transform: rotate(45deg);
-  background-color: rgb(122, 196, 37);
-  border: 1px solid black;
-  border-radius: 40%;
+  color: yellow;
+  filter: drop-shadow(15px 15px 1px  rgb(180, 182, 184));
 }
 
 .brush-mark {
@@ -670,38 +673,7 @@ footer {
   }
 }
 
-
 /*---------------------------------------------------------*/
-
-
-.oneCandy {
-  margin-top: -17%;
-  height: 50%; 
-  width: 5%;
-  top: 50%;
-  font-size: 70px;
-  position: absolute;
-}
-.oneCandy:nth-of-type(1)  { animation: wave 17s   0.000s linear infinite; }
-.oneCandy:nth-of-type(2)  { animation: wave 17s -16.227s linear infinite; }
-.oneCandy:nth-of-type(3)  { animation: wave 17s -15.455s linear infinite; }
-.oneCandy:nth-of-type(4)  { animation: wave 17s -14.682s linear infinite; }
-
-
-@keyframes wave {
-  0%   { left:-2%; }
-  10%  { height:10%; margin-top: -5%; }
-  20%  { height:34%; margin-top:-10%; }
-  30%  { height:10%; margin-top: -5%; }
-  40%  { height:34%; margin-top:-1%; }
-  50%  { height:10%; margin-top: -15%; }
-  60%  { height:34%; margin-top:-29%; }
-  70%  { height:10%; margin-top: -5%; }
-  80%  { height:34%; margin-top:-17%; }
-  90%  { height:10%; margin-top: -5%; }
-  100% { height:34%; margin-top:-27%; left:100%; }
-}
-
 
 @media all and (max-width: 500px) {
   .card-list {
